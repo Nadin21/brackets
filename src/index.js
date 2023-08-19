@@ -8,7 +8,8 @@ module.exports = function check(str, bracketsConfig) {
   do {
     let i = 0;
     array_str.forEach(element => {
-      if (~result_str.indexOf(element)) result_str = result_str.replaceAll(element, '');
+      let index_element = result_str.indexOf(element);
+      if (~index_element) result_str = result_str.slice(0,index_element) + result_str.slice(index_element+2);
       else i++;
 
     })
