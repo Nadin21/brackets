@@ -10,12 +10,12 @@ module.exports = function check(str, bracketsConfig) {
     array_str.forEach(element => {
       if (~result_str.indexOf(element)) result_str = result_str.replaceAll(element, '');
       else i++;
-      if (i == length_array) break;
-    })
 
+    })
+    if (i == length_array) break;
   } while (result_str);
-  
-  if(!result_str.length) return true;
+
+  if (!result_str.length) return true;
   else return false;
 
 }
