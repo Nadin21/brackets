@@ -14,6 +14,9 @@ module.exports = function check(str, bracketsConfig) {
     })
 
   } while (result_str);
-
+  
+  if(!result_str.length) return true;
+  else return false;
 
 }
+
